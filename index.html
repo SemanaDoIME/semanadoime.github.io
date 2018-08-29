@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana do IME 2018</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+
+    .newsdatecol {
+
+      width: 22%;
+
+      top: 0;
+
+      font-weight:bold;
+
+      text-align:left;
+
+      margin-top: 0;
+
+      vertical-align: top !important;
+
+    }
+
+    .newscontentcol {
+
+      width: 75%;
+
+      padding-left:8px;
+
+      text-align:left;
+
+
+
+    }
+
+  </style>
+<style type="text/css">
+td {
+      text-align:center; /*设置水平居中*/
+      vertical-align:middle !important;/*设置垂直居中*/
+}
+
+</style>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/bootstrap-hover-dropdown.min.js"></script>
+
+  <script>
+
+      var datepager = 0;
+
+      function callDatePager(i) {
+
+        if(i==0) {
+
+          $("#date1").show();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+
+        } else if(i==1) {
+
+          $("#date1").hide();
+
+          $("#date2").show();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+
+        } else if(i==2) {
+
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").show();
+
+          $("#date4").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+
+
+        } else if(i==3) {
+
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").show();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+
+        } else if(i==4) {
+
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").show();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+
+        } else if(i==5) {
+
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").show();
+
+          $("#date7").hide();
+
+
+        } else if(i==6) {
+
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").show();
+
+        } else {
+          $("#date1").hide();
+
+          $("#date2").hide();
+
+          $("#date3").hide();
+
+          $("#date4").hide();
+
+          $("#date5").hide();
+
+          $("#date6").hide();
+
+          $("#date7").hide();
+        }
+
+      }
+
+
+
+      function nextDatePager() {
+
+        datepager = datepager + 1;
+
+        if(datepager == 7) datepager = 0;
+
+        callDatePager(datepager);
+
+      }
+
+
+
+      function prevDatePager() {
+
+        datepager = datepager - 1;
+
+        if(datepager == -1) datepager = 6;
+
+        callDatePager(datepager);
+
+      }
+
+
+
+      var filmpager = 0;
+
+      function callFilmPager(i) {
+
+       if(i==0) {
+
+          $("#film1").show();
+
+          $("#film2").hide();
+
+        } else if(i==1) {
+
+          $("#film1").hide();
+
+          $("#film2").show();
+
+        } else {
+
+          $("#film1").hide();
+
+          $("#film2").hide();
+
+        }
+
+      }
+
+
+
+      function nextFilmPager() {
+
+        filmpager = filmpager + 1;
+
+        if(filmpager == 2) filmpager = 0;
+
+        callFilmPager(filmpager);
+
+      }
+
+
+
+      function prevFilmPager() {
+
+        filmpager = filmpager - 1;
+
+        if(filmpager == -1) filmpager = 1;
+
+        callFilmPager(filmpager);
+
+      }
+
+
+
+      function setAnimation(id, effect) {
+
+        $("#"+id).removeClass().addClass(effect +' animated').
+
+        one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+        });
+
+
+
+      }
+
+
+
+
+
+    $(document).ready(function(){
+
+
+
+    $('.pager .pulsante').click(function(e) {
+
+          $(this).blur();
+
+    });
+
+
+
+    callDatePager(datepager);
+
+    callFilmPager(filmpager);
+
+
+    });
+
+    </script>
+
+</head>
+
+<body>
+
+  <script src="loadhead.js"></script>
+
+  <script>loadheaderexecute(1);</script>
+
+
+
+<div class="container">
+
+
+
+  <img src="img/capa.jpg" width="100%" class="img-responsive " alt="Responsive image">
+  <table class="table table-bordered table-condensed" style="margin-top:5px;font-size:small;">
+
+            <thead>
+
+              <tr style=" background-color:#d9edf7;">
+                <th class="text-center">Qua 24/10</th>
+                <th class="text-center">Qui 25/10</th>
+                <th class="text-center">Sex 26/10</th>
+              </tr>
+              <tr style=" background-color:#d9edf7;">
+                <td colspan="2" align="center"><font size="+1">Evento Principal</font></td>
+                <td align="center">Maratona de Programação<br>
+                </td>
+                <td colspan="3" rowspan="2" align="center">
+                    <font size="+2"><a href="program/schedule.html">Agenda</a></font>
+                </td>
+                <td colspan="3" rowspan="2" align="center">
+                    Pós-evento<br/> <a href="social/Escorial.html">Fotos</a>
+                </td>
+              </tr>
+            </thead>
+          </table>
+
+
+
+  <div class="row">
+
+    <div class="col-xs-12">
+
+	<div class="row">
+
+
+
+
+
+    <div class="col-md-4" role="main">
+
+      <a href="cfp/registration.html" class="btn btn-warning btn-default active" role="button">Inscreva-se</a>
+      <a href="cfp/registration.html" class="btn btn-warning btn-default active" role="button">Minicursos</a>
+
+      <br>
+      <br>
+
+      <div class="panel panel-primary">
+
+            <div class="panel-heading">
+
+              <h3 class="panel-title">Últimas notícias</h3>
+
+            </div>
+
+            <div class="panel-body" style="pdding-bottom: 0;height: 285px;padding: 15px;">
+
+              <table>
+                 <tr>
+
+                  <td class="newsdatecol">2018-08-29</td>
+
+                  <td class="newscontentcol"> As <a href="program/schedule.html">inscrições</a> estão abertas!</td>
+
+                </tr>
+
+                  <td class="newsdatecol">2018-08-25</td>
+
+                  <td class="newscontentcol"> Veja a <a href="registration.html">programação</a> do evento</td>
+
+                </tr>
+
+              </table>
+
+            </div>
+
+            <div class="panel-footer text-right">
+              <a href="news.html">Mais notícias</a>
+            </div>
+
+      </div>
+
+
+ </div>
+
+    <div class="col-md-8">
+
+      <h2>Bem-vindos!</h2>
+
+      <hr>
+      <p style="font-size:16px; text-indent:2em; text-align:justify;">
+        <strong>A Semana do IME</strong> é um tradicional encontro acadêmico do Instituto de Matemática e Estatística da UERJ.
+
+      </p>
+
+      <p style="font-size:16px; text-indent:2em; text-align:justify;">
+
+        Esse ano, a já tradicional Semana do IME, em sua décima segunda edição, integrará a Semana Nacional de Ciência e Tecnologia e acontecerá nos dias 25 a 27 de outubro de 2017. Esperamos que seja um evento especial para toda a comunidade científica e para a sociedade. Com este intuito, estão programados minicursos, oficinas, palestras, maratona de programação, maratona de matemática, sessões de painéis de alunos da escola básica,  de graduação e de pós-graduação e uma Exposição em colaboração com o Museu Espaço Ciência Viva e com o Colégio Pedro II.
+      </p>
+
+      <p style="font-size:16px; text-indent:2em; text-align:justify;">
+
+        Diretor: Geraldo Magela da Silva<br/>
+Vice Diretor: Sergio Luiz Silva
+
+      </p>
+
+      <hr>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <hr style="height:
+
+  <footer class="icsme2017" role="contentinfo" >
+
+  <div class="container">
+
+    <div class="row">
+
+      <p class="lead text-center">Patrocinadores</p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3">
+
+        <a style="border:0;" href="http://www.ime.uerj.br" class="thumbnail"><img src="img/logoime.png" alt="IME-UERJ"></a>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
+
+        <a style="border:0;" href="http://www.ime.uerj.br" class="thumbnail"><img src="img/logoime.png" alt="IME-UERJ"></a>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <p class="lead text-center">Parceiros</p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-12">
+
+        <a style="border:0;" href="http://www.ime.uerj.br" class="thumbnail"><img src="img/logoime.png" alt="IME-UERJ"></a>
+
+      </div>
+
+    </div>
+
+    <br/>
+
+          <p class="lead text-center">Apoio</p>
+    <br/>
+
+    <div class="row">
+
+      <div class="col-xs-12">
+
+        <a style="border:0;" href="http://www.ime.uerj.br" class="thumbnail"><img src="img/logoime.png" alt="IME-UERJ"></a>
+
+      </div>
+
+    </div>
+
+    <br/>
+
+  </footer>
+
+
+
+</body>
+
+</html>
